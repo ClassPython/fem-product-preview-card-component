@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    
+/*  font size 16px  */
+font-size: 100%;
+
+/* ## Colors */
+/* ### Primary */
+
+--green-500: hsl(158, 36%, 37%);
+--green-700: hsl(158, 42%, 18%);
+
+/* ### Neutral */
+
+--black: hsl(212, 21%, 14%);
+--grey: hsl(228, 12%, 48%);
+--cream: hsl(30, 38%, 92%);
+--white: hsl(0, 0%, 100%);
+
+
+/* Typography */
+
+/* text preset I */
+/* Fraunces bold - 32px, 100% line height, 0px letter spacing  */
+--h1-family:"Fraunces", sans-serif;
+--h1-size:2rem;
+--h1-weight:700;
+--h1-line-height:100:
+--h1-letter-spacing:0;
+
+
+/* text preset II */
+/* Montserrat bold - 14px, 110% line height, 0px letter spacing  */
+--h2-family:"Montserrat", sans-serif;
+--h2-size:.875rem;
+--h2-weight:700;
+--h2-line-height:110:
+--h2-letter-spacing:0;
+
+/* text preset III */
+/* Montserrat medium - 14px, 160% line height, 0px letter spacing  */
+--h3-family:"Montserrat", sans-serif;
+--h3-size:.875rem;
+--h3-weight:500;
+--h3-line-height:160:
+--h3-letter-spacing:0;
+
+/* text preset IV */
+/* Montserrat medium - 12px, 120% line height, 5px letter spacing  */
+--h4-family:"Montserrat", sans-serif;
+--h4-size:.75rem;
+--h4-weight:500;
+--h4-line-height:120:
+--h4-letter-spacing:.4167em; /* 12px / 5px  -> font size/letter spacing */
+
+/* text preset V */
+/* Montserrat medium - 13px, 120% line height, 0px letter spacing  */
+--h5-family:"Montserrat", sans-serif;
+--h5-size:.8125rem;
+--h5-weight:500;
+--h5-line-height:120:
+--h5-letter-spacing:0; /* 12px / 5px  -> font size/letter spacing */
+
+
+/* --------  body ----------- */
+--font-size-body:0.875rem; /*  14px (14/16) */
+--line-height-body:1.25rem; /*  20px - snaps close to 4px/8px grid */  
+
+/* Spacing */
+/* Based on 16px spacing scale  */
+--spacing-500:5rem;     /* 80px */
+--spacing-250:2.5rem;     /* 40px */
+--spacing-200:2rem;     /* 32px */
+--spacing-150:1.5rem;    /* 24px */
+--spacing-100:1rem;   /* 16px */
+--spacing-81:.8125rem;   /* 13px */
+--spacing-50:.50rem;   /* 8px */
+--spacing-25:.25rem;  /* 4px */
+
+}
+
+body{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   font-size: var(--font-size-body);
+   line-height: var(--line-height-body);
+   min-height: 100svh;
+   width: 100%;
+   background-color: var(--cream);
+   /* ? padding here or margins on card container */
+   padding-left:var(--spacing-81);
+   padding-right:var(--spacing-81);
+}
+
+.card-container{
+  margin-top: var(--spacing-500);
+  /* max-height:750px; */
+  height:750px;
+  width: 350px;
+  background-color: var(--white);
+}
+
+/*  ? use font size clamps if font sizes change*/
+
+/* 768 x 1029 */
+/* ? convert to em or rem */
+@media screen and (min-width:768px){
+
+    body{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-container{
+        display: flex;
+        flex-direction: row;
+        /* flex: 1 1; */
+        margin-top: 0;
+        gap: 0px;
+        background-color: palegreen;
+        width: 600px;
+        height: 456px;
+    }
+
+    .card{
+        /* background-color: aqua; */
+        flex: 1;
+        /* width: 0; */
+    }
+
+    .image{
+        /* width: 300px; */
+        /* background-color: aqua; */
+        /* max-inline-size: 100%; */
+        block-size: auto;
+        object-fit: cover;
+        object-position: center;
+        width: 350px;
+        height: 342px;
+    }
+
+    .info{
+        background-color: blue;
+    }
+}
