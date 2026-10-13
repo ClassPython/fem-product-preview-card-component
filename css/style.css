@@ -96,17 +96,22 @@ body{
 .card-container{
     display: flex;
     flex-direction: column;
-    min-width: 320px;
-    width: 350px;
+    min-width: 0;
+    width:min(350px, calc(100% - 1rem));
     height:750px;
-   margin-left: var(--spacing-81);  /* 13px */
-   margin-right: var(--spacing-75); /* 12 px */
-   background-color: var(--white);
+    margin-left: var(--spacing-81);  /* 13px */
+    margin-right: var(--spacing-75); /* 12 px */
+    background-color: var(--white);
 }
 
 .image-container{
     width: 100%;
     height: 342px;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
 }
 
 .info-container{
@@ -162,11 +167,6 @@ body{
 }
 
 .price{
-    font-family: var(--h1-family);
-    font-size: var(--h1-size);
-    font-weight: var(--h1-weight);
-    line-height: var(--h1-line-height);
-    letter-spacing: var(--h1-letter-spacing);
     color: var(--green-500);
 }
 
