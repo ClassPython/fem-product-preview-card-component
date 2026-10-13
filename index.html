@@ -15,45 +15,35 @@
 <body>
 
     <main class="card-container">
-        <div class="image-container">
-            <!-- <img class="image" src="./images/image-product-mobile.jpg" width="350" height="342"></img> -->
-            <!-- <img class="image" src="./images/image-product-mobile.jpg"></img> -->
-      <picture>
-  <!-- Loaded on screens 768px and wider -->
-          <source media="(min-width: 768px)" srcset="./images/image-product-desktop.jpg">
-  <!-- Fallback/Mobile image loaded on smaller screens -->
-          <img src="./images/image-product-mobile.jpg" alt="Responsive Banner" style="width:100%; height:100%;">
-      </picture>
 
+        <div class="image-container">  
+          <picture>
+            <source media="(min-width: 768px)" srcset="./images/image-product-desktop.jpg">
+          <!-- Fallback/Mobile image loaded on smaller screens -->
+            <img src="./images/image-product-mobile.jpg" alt="Perfume bottle" style="width:100%; height:100%;">
+          </picture>
         </div>
+
         <div class="info-container">
-            <!-- ? maybe these div's could be sections -->
-              <div class="title-container">
-                <!-- h4 -->
-                <span class="category">PERFUME</span>
-                <!-- h1 -->
-                <span class="title">Gabrielle Essence Eau De Parfum</span>
-                <!-- h3 -->
-                 <!-- ? maybe make this a p -->
-                <p class="description">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
-              </div>
-              <div class="price-container">
-                <span class="price">$149.99</span>
-                <span class="old-price">$169.99</span>
 
-              </div>
+            <section class="title-container">
+              <span class="category">PERFUME</span>
+              <span class="title">Gabrielle Essence Eau De Parfum</span>
+              <p class="description">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+            </section>
+              
+            <section class="price-container">
+              <span class="price">$149.99</span>
+              <span class="old-price">$169.99</span>
+            </section>
 
-              <div class="btn-container">
-                <!-- ? make re-usable -->
-                 <button>
-                     <img class="btn-icon" src="./images/icon-cart.svg" alt="Add to cart button">
-                    <p class="btn-text">Add to Cart</p>
-                 </button>
-
-              </div>
-
-
-        </div>
+            <section class="btn-container">
+                <button>
+                  <img class="btn-icon" src="./images/icon-cart.svg" alt="Add to cart button">
+                  <p class="btn-text">Add to Cart</p>
+                </button>
+             </section>
+          </div>
 
     </main>
     

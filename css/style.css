@@ -64,7 +64,7 @@
     --h5-letter-spacing:0; /* 12px / 5px  -> font size/letter spacing */
 
 
-/* --------  body ----------- */
+/* --------  Body ----------- */
     --font-size-body:0.875rem; /*  14px (14/16) */
     --line-height-body:1.25rem; /*  20px - snaps close to 4px/8px grid */  
 
@@ -96,10 +96,9 @@ body{
 .card-container{
     display: flex;
     flex-direction: column;
+    min-width: 320px;
     width: 350px;
     height:750px;
-  /*? maybe min width 320 and max width 350 */
-  /* ? could use clamp and stay between those widths */
    margin-left: var(--spacing-81);  /* 13px */
    margin-right: var(--spacing-75); /* 12 px */
    background-color: var(--white);
@@ -110,15 +109,6 @@ body{
     height: 342px;
 }
 
-/* .image{
-    block-size: auto;
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-    width: 350px;
-    height: 342px;
-}  */
-
 .info-container{
     display: flex;
     flex-direction: column;
@@ -128,7 +118,6 @@ body{
     row-gap: var(--spacing-150);
     background-color:white;
 }
-
 
 .title-container{
     display: flex;
@@ -191,6 +180,8 @@ body{
     color: var(--grey);
 }
 
+
+/* re-usable button */
 button{
     display: flex;
     flex-direction: row;
@@ -228,8 +219,7 @@ button:hover{
 
 
 
-/* ? convert to em or rem */
-@media screen and (min-width:768px){
+@media screen and (min-width:48em){
 
 body{
     align-items: center;
@@ -251,19 +241,10 @@ body{
     height: 456px;
 }
 
-/* .image{
-    width: 300px;
-    height: 456px;
-    block-size: auto;
-    object-fit: cover;
-    object-position: center;
-} */
-
 .info-container{
     width: 300px;
     height: 456px;
     row-gap: var(--spacing-200);
 }
-
    
 }
