@@ -2,7 +2,7 @@
 
 ## Overview
 
-This challenge was to build and deploy Frontend Mentor's Product Preview Card Component challenge. Frontend Mentor provided various assets, including the images, a Figma file, and a style guide.
+This challenge was to build and deploy Frontend Mentor's Product preview card component challenge. Frontend Mentor provided various assets, including the images, a Figma file, and a style guide.
 
 [Frontend Mentor Product preview card component challenge](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa)
 
