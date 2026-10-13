@@ -7,238 +7,261 @@
 :root{
     
 /*  font size 16px  */
-font-size: 100%;
+    font-size: 100%;
 
 /* ## Colors */
 /* ### Primary */
-
---green-500: hsl(158, 36%, 37%);
---green-700: hsl(158, 42%, 18%);
+    --green-500: hsl(158, 36%, 37%);
+    --green-700: hsl(158, 42%, 18%);
 
 /* ### Neutral */
-
---black: hsl(212, 21%, 14%);
---grey: hsl(228, 12%, 48%);
---cream: hsl(30, 38%, 92%);
---white: hsl(0, 0%, 100%);
+    --black: hsl(212, 21%, 14%);
+    --grey: hsl(228, 12%, 48%);
+    --cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
 
 
 /* Typography */
 
 /* text preset I */
 /* Fraunces bold - 32px, 100% line height, 0px letter spacing  */
---h1-family:"Fraunces", sans-serif;
---h1-size:2rem;
---h1-weight:700;
---h1-line-height:1:
---h1-letter-spacing:0;
-
+    --h1-family:"Fraunces", sans-serif;
+    --h1-size:2rem;
+    --h1-weight:700;
+    --h1-line-height:1;
+    --h1-letter-spacing:0;
 
 /* text preset II */
 /* Montserrat bold - 14px, 110% line height, 0px letter spacing  */
---h2-family:"Montserrat", sans-serif;
---h2-size:.875rem;
---h2-weight:700;
---h2-line-height:1.1:
---h2-letter-spacing:0;
+    --h2-family:"Montserrat", sans-serif;
+    --h2-size:.875rem;
+    --h2-weight:700;
+    --h2-line-height:1.1;
+    --h2-letter-spacing:0;
 
 /* text preset III */
 /* Montserrat medium - 14px, 160% line height, 0px letter spacing  */
---h3-family:"Montserrat", sans-serif;
---h3-size:.875rem;
---h3-weight:500;
---h3-line-height:1.6:
---h3-letter-spacing:0;
+    --h3-family:"Montserrat", sans-serif;
+    --h3-size:.875rem;
+    --h3-weight:500;
+    --h3-line-height:1.6;
+    --h3-letter-spacing:0;
 
 /* text preset IV */
 /* Montserrat medium - 12px, 120% line height, 5px letter spacing  */
---h4-family:"Montserrat", sans-serif;
---h4-size:.75rem;
---h4-weight:500;
---h4-line-height:1.2:
---h4-letter-spacing:.4167em; /* 12px / 5px  -> font size/letter spacing */
+    --h4-family:"Montserrat", sans-serif;
+    --h4-size:.75rem;
+    --h4-weight:500;
+    --h4-line-height:1.2;
+    --h4-letter-spacing:.4167em; /* 12px / 5px  -> font size/letter spacing */
 
 /* text preset V */
 /* Montserrat medium - 13px, 120% line height, 0px letter spacing  */
---h5-family:"Montserrat", sans-serif;
---h5-size:.8125rem;
---h5-weight:500;
---h5-line-height:1.2:
---h5-letter-spacing:0; /* 12px / 5px  -> font size/letter spacing */
+    --h5-family:"Montserrat", sans-serif;
+    --h5-size:.8125rem;
+    --h5-weight:500;
+    --h5-line-height:1.2;
+    --h5-letter-spacing:0; /* 12px / 5px  -> font size/letter spacing */
 
 
 /* --------  body ----------- */
---font-size-body:0.875rem; /*  14px (14/16) */
---line-height-body:1.25rem; /*  20px - snaps close to 4px/8px grid */  
+    --font-size-body:0.875rem; /*  14px (14/16) */
+    --line-height-body:1.25rem; /*  20px - snaps close to 4px/8px grid */  
 
 /* Spacing */
 /* Based on 16px spacing scale  */
---spacing-500:5rem;     /* 80px */
---spacing-250:2.5rem;     /* 40px */
---spacing-200:2rem;     /* 32px */
---spacing-150:1.5rem;    /* 24px */
---spacing-100:1rem;   /* 16px */
---spacing-81:.8125rem;   /* 13px */
---spacing-50:.50rem;   /* 8px */
---spacing-25:.25rem;  /* 4px */
-
+    --spacing-500:5rem;     /* 80px */
+    --spacing-250:2.5rem;     /* 40px */
+    --spacing-200:2rem;     /* 32px */
+    --spacing-150:1.5rem;    /* 24px */
+    --spacing-100:1rem;   /* 16px */
+    --spacing-81:.8125rem;   /* 13px */
+    --spacing-75:.75rem;   /* 12px */
+    --spacing-50:.50rem;   /* 8px */
+    --spacing-25:.25rem;  /* 4px */
 }
 
 body{
-   display: flex;
-   flex-direction: column;
-   /* justify-content: flex-start; */
-   justify-content: center;
-   align-items: center;
-   font-size: var(--font-size-body);
-   line-height: var(--line-height-body);
-   min-height: 100svh;
-   width: 100%;
-   background-color: var(--cream);
-   /* ? padding here or margins on card container */
-   /* padding-left:var(--spacing-81); */
-   /* padding-right:var(--spacing-81); */
-   /* margin-left: var(--spacing-81); */
-  /* margin-right: var(--spacing-81); */
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    width: 100%;
+    min-height: 100svh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cream);
 }
 
 .card-container{
- display: flex;
- flex-direction: column;
-  /* margin-top: var(--spacing-500); */
-  /* max-height:750px; */
-  height:750px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height:750px;
   /*? maybe min width 320 and max width 350 */
   /* ? could use clamp and stay between those widths */
-  width: 350px;
-  background-color: var(--white);
-  margin-left: var(--spacing-81);
-  margin-right: var(--spacing-81);
-  /* justify-content: center; */
-  /* align-items: center; */
+   margin-left: var(--spacing-81);  /* 13px */
+   margin-right: var(--spacing-75); /* 12 px */
+   background-color: var(--white);
 }
 
 .image-container{
-    background-color: aqua;
-    /* width: 350px; */
     width: 100%;
     height: 342px;
 }
 
-.image{
-    width: 100%;
+/* .image{
     block-size: auto;
     object-fit: cover;
     object-position: center;
+    width: 100%;
     width: 350px;
     height: 342px;
-} 
+}  */
 
 .info-container{
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 408px;
-    background-color:white;
     padding: var(--spacing-200);
     row-gap: var(--spacing-150);
+    background-color:white;
 }
 
 
 .title-container{
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
-    /* align-items: center; */
     row-gap: var(--spacing-150);
-    /* column-gap: var(--spacing-150); */
-    width: 286px;
-    height: 214px;
-
+    width: 100%;
 }
 
 .category{
- font-family: var(--h4-family);
- font-size: var(--h4-size);
- font-weight: var(--h4-weight);
- line-height: var(--h4-line-height);
- letter-spacing: var(--h4-letter-spacing);
- color: var(--grey);
+    font-family: var(--h4-family);
+    font-size: var(--h4-size);
+    font-weight: var(--h4-weight);
+    line-height: var(--font-size-body);
+    letter-spacing: var(--h4-letter-spacing);
+    color: var(--grey);
 }
 
-.title{
-font-family: var(--h1-family);
- font-size: var(--h1-size);
- font-weight: var(--h1-weight);
- /* line-height: var(--h1-line-height); */
- line-height: 1;
- letter-spacing: var(--h1-letter-spacing);
- color: var(--black);
- /* height: 100%; */
- /* align-self: center; */
- /* justify-self: center; */
-
+.title, .price{
+    font-family: var(--h1-family);
+    font-size: var(--h1-size);
+    font-weight: var(--h1-weight);
+    line-height: var(--h1-line-height);
+    letter-spacing: var(--h1-letter-spacing);
+    color: var(--black);
 }
 
 .description{
-font-family: var(--h3-family);
- font-size: var(--h3-size);
- font-weight: var(--h3-weight);
- line-height: var(--h3-line-height);
- letter-spacing: var(--h3-letter-spacing);
- color: var(--grey);
-
+    font-family: var(--h3-family);
+    font-size: var(--h3-size);
+    font-weight: var(--h3-weight);
+    line-height: var(--h3-line-height);
+    letter-spacing: var(--h3-letter-spacing);
+    color: var(--grey);
+    height: 88px;
 }
 
-/* .card{
-flex: 1;
-} */
+.price-container{
+    display: flex;
+    flex-direction: row;
+    column-gap: var(--spacing-100);
+    align-items: center;
+}
+
+.price{
+    font-family: var(--h1-family);
+    font-size: var(--h1-size);
+    font-weight: var(--h1-weight);
+    line-height: var(--h1-line-height);
+    letter-spacing: var(--h1-letter-spacing);
+    color: var(--green-500);
+}
+
+.old-price{
+    font-family: var(--h5-family);
+    font-size: var(--h5-size);
+    font-weight: var(--h5-weight);
+    line-height: var(--h5-line-height);
+    letter-spacing: var(--h5-letter-spacing);
+    text-decoration: line-through;
+    color: var(--grey);
+}
+
+button{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    border-radius: var(--spacing-50);
+    padding: var(--spacing-100) var(--spacing-200);
+    column-gap: var(--spacing-50);
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: var(--white);
+    background-color: var(--green-500);
+}
+
+button:hover{
+    background-color: var(--green-700);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-icon{
+    width: 18px;
+    height: 18px;
+}
+
+.btn-text{
+   font-family: var(--h2-family);
+   font-size: var(--h2-size);
+   font-weight: var(--h2-weight);
+   line-height: var(--h2-line-height);
+   letter-spacing: var(--h2-letter-spacing);
+   color: var(--white);
+}
 
 
-/*  ? use font size clamps if font sizes change*/
 
-/* 768 x 1029 */
 /* ? convert to em or rem */
 @media screen and (min-width:768px){
 
-    body{
-        align-items: center;
-        justify-content: center;
-    } 
+body{
+    align-items: center;
+    justify-content: center;
+} 
 
-    .card-container{ 
-        display: flex;
-        flex-direction: row;
-        margin-top: 0;
-        gap: 0px;
-        background-color: palegreen;
-        width: 600px;
-        height: 456px;
-        margin: 0;
-    }
+.card-container{ 
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    width: 600px;
+    height: 456px;
+    gap: 0px;
+    margin: 0;
+}
 
-    .image-container{
-        width: 300px;
-        height: 456px;
-    }
-
-    .image{
+.image-container{
     width: 300px;
+    height: 456px;
+}
+
+/* .image{
+    width: 300px;
+    height: 456px;
     block-size: auto;
     object-fit: cover;
     object-position: center;
-    /* width: 350px; */
-    height: 456px;
-    }
+} */
 
-    .info-container{
-    /* display: flex; */
-    /* flex-direction: column; */
+.info-container{
     width: 300px;
     height: 456px;
-    /* background-color: blue; */
-    /* padding: var(--spacing-200); */
     row-gap: var(--spacing-200);
 }
 
